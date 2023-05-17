@@ -1,8 +1,8 @@
-import { Bubble } from 'react-chartjs-2';
+import {  Pie } from 'react-chartjs-2';
 
 const BubbleChart = ({chartData}) => {
   return (
-    <Bubble data={chartData} />
+    <Pie data={chartData} />
   )
 }
 

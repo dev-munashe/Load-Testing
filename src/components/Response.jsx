@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import BarChart from './BarChart';
 import LineChart from './LineChart';
 import BubbleChart from './BubbleChart';
@@ -9,7 +8,7 @@ const Response = ({averageResponseTime, maxValue, minValue , totalBytes, respons
 var index = responses.map((response, index) => (index + 1));
 
 //Maximum and minimum response time- BarChart
-  const [maxAndMinValue, setMaxAndMinVaue] = useState({
+  const maxAndMinValue = {
     //x-axis
     labels: ["Minimum Value", "Maximum Value"],
     //y-axis
@@ -20,10 +19,10 @@ var index = responses.map((response, index) => (index + 1));
       borderColor: 'black',
       borderWidth: 1
     }]
-  });
+  };
  
   //Response Time Vs Index-LineChart
-  const [responseTime, setResponseTime] = useState({
+  const responseTime = {
     labels: index,
     datasets: [{
       label: "Response Time /ms",
@@ -32,22 +31,20 @@ var index = responses.map((response, index) => (index + 1));
       borderColor: 'rgb(75, 192, 192)',
       tension: 0.1
     }]
-  });
+  };
 
   //Response Sizes for each request,
-  const [responseSize, setResponseSize] = useState({
+  const responseSize = {
     labels: responsesSize.map((size, index) => (index+1)),
     datasets: [{
       label: "Response Sizes /bytes",
       data: responsesSize.map((size) => size),
-      backgroundColor: 'rgb(255, 99, 132)',
-      radius: 10,
-      hoverRadius: 9
+      backgroundColor: ['rgb(255, 99, 132)', 'rgb(75, 192, 192)', "#F6C6EA"]
     }]
-  }) 
+  };
 
   //Average response time for all requests.
-  const [averageTime, setAverageTime] = useState({
+  const averageTime = {
     labels: ['Average Response Time'],
     datasets: [{
     label: 'Average Value',
@@ -59,7 +56,7 @@ var index = responses.map((response, index) => (index + 1));
     pointHoverBorderColor: 'rgb(255, 99, 132)',
     radius: 13
     }]
-  })
+  };
 
   return (
     <div className='container'>
@@ -74,16 +71,13 @@ var index = responses.map((response, index) => (index + 1));
               </div>
             </div>
             <div className='row mt-5 mb-5'>
+            <div className='col-md-6'>
+                <h3 className='text-center'>Response sizes for each request.</h3>
+                <BubbleChart chartData={responseSize} />
+              </div>
               <div className='col-md-6'>
               <h3 className='text-center'>Average response time for all requests.</h3>
               <RadarChart chartData={averageTime} />
-              </div>
-              <div className='col-md-6'>
-                <h3 className='text-center'>Response sizes for each request.</h3>
-                <BubbleChart chartData={responseSize} />
-                <div>
-                <h4 className='text-left mt-3' style={{color:'rgb(255, 99, 132)'}}>Total Response Size: {totalBytes} Bytes</h4>
-                </div>
               </div>
             </div>
     </div>

@@ -87,7 +87,7 @@ function App() {
   };
   
   return (
-    <div className="App">
+    <div className="container">
       <Header />
       <form onSubmit={handleSubmit} className='row mt-5 mb-5 mx-5' action="post" style={{textAlign:'center'}}>
             <div className='col-md-8'>
