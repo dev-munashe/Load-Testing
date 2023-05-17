@@ -1,77 +1,80 @@
-# Getting Started with Create React App
+## Response Time Tracker ##
+Response Time Tracker is a web application that allows you to measure the response time of an endpoint URL and capture various statistics such as average response time, maximum and minimum response times, and response sizes. This README file provides instructions on how to run and use the application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Prerequisites
+Before running the application, make sure you have the following installed:
 
-## Available Scripts
+Node.js: Download and install Node.js
 
-In the project directory, you can run:
+# Getting Started
+Clone the repository to your local machine:
+bash
+Copy code
+git clone https://github.com/dev-munashe/Load-Testing.git
+Navigate to the project directory:
+bash
+Copy code
+cd response-time-tracker
+Install the dependencies:
+bash
+Copy code
+npm install
 
-### `npm start`
+# Running the Application
+To run the application locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+Open your web browser and visit http://localhost:3000 to access the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Using the Application
+Enter the endpoint URL: In the input field labeled "Endpoint URL," enter the URL of the endpoint you want to measure the response time for.
 
-### `npm test`
+Enter the number of times: In the input field labeled "Number of Times," enter the number of times you want to hit the endpoint.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click "Send Request": Click the "Send Request" button to initiate the requests to the endpoint.
 
-### `npm run build`
+View the results: Once the requests have been processed, you will see the following information displayed on the page:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Response time for each request: The response time for each request will be listed individually.
+Average response time: The average response time for all requests.
+Maximum and minimum response times: The maximum and minimum response times recorded.
+Total response size: The total size of the response in bytes.
+Charts: The application also provides visual representations of the data using charts. The charts include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Line chart: Displays the response time for each request.
+Bar chart: Displays the maximum and minimum response times.
+Radar chart: Displays the average response time.
+Bubble chart: Displays the response sizes for each request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Contributing
+If you would like to contribute to this project, please follow these steps:
 
-### `npm run eject`
+Fork the repository.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a new branch for your feature or bug fix:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+git checkout -b feature/your-feature-name
+Make the necessary changes and commit your code:
+bash
+Copy code
+git commit -m "Add your commit message here"
+Push your changes to your forked repository:
+bash
+Copy code
+git push origin feature/your-feature-name
+Create a pull request on the original repository.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# License
+This project is licensed under the MIT License.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Acknowledgements
+This project was developed using React.js and various charting libraries.
+Feel free to modify this README file to suit your specific project requirements. Provide clear instructions, including prerequisites, setup steps, usage guidelines, and any additional information that would help users understand and utilize your application effectively.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# Tools Used.
-1. For implementing a mechanism to measure the response time for each request I used 'Performance' API 
-available in morden web browsers.
- ...link for testing ("https://jsonplaceholder.typicode.com/")
-
-2. To export the capture information and statistics as a report or file in JavaScript, you can utilize the FileSaver.js library
+# Deployment 
+This project is also deployed on vercel.
+Just open this url: https://load-testing-app.vercel.app/
