@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Tools Used.
+1. For implementing a mechanism to measure the response time for each request I used 'Performance' API 
+available in morden web browsers.
+ ...link for testing ("https://jsonplaceholder.typicode.com/")
+
+2. To export the capture information and statistics as a report or file in JavaScript, you can utilize the FileSaver.js library
